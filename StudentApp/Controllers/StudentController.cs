@@ -17,7 +17,7 @@ namespace StudentApp.Controllers
                 return Ok(entities.StudentTables.ToList());
             }
         }
-        public IHttpActionResult Post(StudentTable student)
+        public IHttpActionResult Post([FromBody]StudentTable student)
         {
             using (StudentDbEntities entities = new StudentDbEntities())
             {
@@ -26,7 +26,7 @@ namespace StudentApp.Controllers
                 return Ok(entities.StudentTables.ToList());
             }
         }
-        public IHttpActionResult Put(int id, StudentTable student)
+        public IHttpActionResult Put(int id, [FromBody]StudentTable student)
         {
             using (StudentDbEntities entities = new StudentDbEntities())
             {
