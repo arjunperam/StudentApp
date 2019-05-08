@@ -19,6 +19,7 @@ namespace StudentApp
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            config.
         }
     }
 }
